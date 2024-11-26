@@ -1,0 +1,244 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+background-color: #000;
+font-family: "Roboto", sans-serif;
+overflow: hidden;
+}
+
+.container{
+    display: flex;
+}
+
+.left{
+    /* position: fixed; */
+    width: 25vw;
+    height: 100%;
+}
+
+.right{
+    position: relative;
+    width: 75vw;
+    height: 99vh;
+}
+
+
+.home{
+    margin: 8px;
+    padding: 30px;
+    height: 13vh;
+    background-color: #121212;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.home ul li{
+    display: flex ;
+    width: 24px;
+    gap: 28px;
+    list-style: none;
+    font-weight: 700;
+    padding-top: 20px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.library{
+    display: flex;
+    margin: 8px;
+    margin-bottom: 0;
+    height: 2vh;
+    background-color: #121212;
+    border-radius: 5px;
+    padding: 30px;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.lib-heading{
+    width: 24px;
+}
+
+.library p{
+    color: #a7a7a7;
+    padding-top: 2px;
+    font-weight: 700;
+}
+
+.song-card{
+    height: 53vh;
+    background-color: #121212;
+    margin: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-y: scroll;
+    
+}
+
+.footer{
+    margin: 8px;
+    margin-top: 0;
+    padding-left: 30px;
+    padding-top: 10px;
+    display: flex;
+    height: 15vh;
+    background-color: #121212;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.footer a{
+    color: gray;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/* right side ....................................... */
+
+.header{
+    display: flex;
+    height: 8vh;
+    margin: 9px;
+    margin-bottom: 0%;
+    margin-left: 0;
+    background-color: #121212;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.spotify-playlist{
+    height: 90vh;
+    margin-right: 9px;
+    background: linear-gradient(to bottom, #1c1c1c, #000000); 
+}
+
+.card-container{
+    height:70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 15px;
+    overflow-y: scroll;
+}
+
+.card {
+    height: 35vh;
+    width: 154px;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s; /* Adding transition for smooth effect */
+  }
+  
+  .card:hover {
+    background-color: #252525;
+    cursor: pointer;
+  }
+  
+  .card img {
+    height: 160px;
+    width: 140px;
+    border-radius: 10px;
+  }
+  
+  .play {
+    position: absolute;
+    bottom: -20px; /* Initially hide the play button below the card */
+    left: 77%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    width: 40px;
+    height: 40px;
+    fill: #00ff00;
+    transition: bottom 0.3s; /* Adding transition for smooth movement */
+    opacity: 0;
+  }
+  
+  .card:hover .play {
+    bottom: 115px; /* Show the play button on hover */
+    opacity: 1;
+  }
+  
+
+  .play-bar{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgb(213, 223, 213);
+    width: 143vh;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .song-button {
+    display: flex;
+    align-items: center;
+    justify-content:space-between; /* Pushes song-info to the start and centers image-container */
+  }
+  
+  .song-info {
+    margin-left: 12px;
+  }
+  
+  .image-container {
+    display: flex;
+    position: fixed;
+    gap: 12px; /* Adjust spacing between images */
+    margin-left: 50%;
+
+  }
+
+  .song-time{
+    margin-right: 18px;
+    margin-left: 40%;
+  }
+
+  .volume {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: flex-end; /* Push content to the right */
+    margin-right: 1%;
+}
+
+.volume img {
+    margin-right: 10px; /* Add some space between the image and the range input */
+    cursor: pointer;
+}
+
+.volume .volume-range {
+    width: 100px; /* Adjust the width as needed */
+}
+
+
+  .seek-bar{
+    background-color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 140vh;
+    height: 2px;
+    cursor: pointer;
+
+ }
+
+ .circle{
+    position: relative;
+    bottom: 6px;
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    transition: left 0.5s;
+ }
+
+  
