@@ -34,7 +34,7 @@ function audiotime() {
 }
 
 let getsong = async () => {
-    let response = await fetch("http://127.0.0.1:5501/spotifyclone/spotify%20clone/songs/");
+    let response = await fetch("http://127.0.0.1:5501/spotifyclone/songs/");
     let data = await response.text();
     let div = document.createElement("div");
     div.innerHTML = data;
@@ -53,7 +53,7 @@ let playbutton = () => {
             info.innerText = button.innerText;
 
             let songName = button.innerText.replaceAll(" ", "%20"); // Replace spaces with %20
-            let audioSrc = `http://127.0.0.1:5501/spotifyclone/spotify%20clone/songs/${songName}`;
+            let audioSrc = `http://127.0.0.1:5501/spotifyclone/songs/${songName}`;
 
             if (currentAudio && currentAudio.src === audioSrc) {
                 if (currentAudio.paused) {
@@ -83,7 +83,7 @@ next.addEventListener("click", () => {
     if (btn) {
         info.innerText = btn.innerText;
         let songName = btn.innerHTML.replaceAll(" ", "%20"); // Replace spaces with %20
-        let audioSrc = `http://127.0.0.1:5501/spotifyclone/spotify%20clone/songs/${songName}`;
+        let audioSrc = `http://127.0.0.1:5501/spotifyclone/songs/${songName}`;
         let audio = new Audio(audioSrc);
         if (currentAudio) {
             currentAudio.pause();
@@ -101,7 +101,7 @@ pre.addEventListener("click", () => {
     let btn = currentButton.previousElementSibling;
     if (btn) {
         let songName = btn.innerHTML.replaceAll(" ", "%20"); // Replace spaces with %20
-        let audioSrc = `http://127.0.0.1:5501/bigprojects/spotify%20clone/songs/${songName}`;
+        let audioSrc = `http://127.0.0.1:5501/bigprojects/songs/${songName}`;
         let audio = new Audio(audioSrc);
         if (currentAudio) {
             currentAudio.pause();
